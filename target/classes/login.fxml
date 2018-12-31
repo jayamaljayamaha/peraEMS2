@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="328.0" styleClass="labelHeadingBack">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="119.0" layoutY="32.0" styleClass="labelHeading" text="LOGIN" />
+         </children>
+      </Pane>
+      <VBox layoutX="48.0" layoutY="207.0" prefHeight="317.0" prefWidth="274.0">
+         <children>
+            <TextField styleClass="textBox">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <TextField styleClass="textBox" />
+            <Region prefHeight="126.0" prefWidth="274.0" />
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" styleClass="loginButton" text="Button" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </children>
+
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+</AnchorPane>

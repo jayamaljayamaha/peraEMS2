@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="signUpPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="328.0" styleClass="labelHeadingBack">
+            <children>
+                <Label contentDisplay="CENTER" layoutX="108.0" layoutY="32.0" styleClass="labelHeading" text="SIGN UP" />
+            </children>
+        </Pane>
+        <VBox layoutX="48.0" layoutY="153.0" prefHeight="371.0" prefWidth="274.0">
+            <children>
+                <TextField promptText="User Name" styleClass="textBox">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </TextField>
+                <TextField promptText="Password" styleClass="textBox" />
+            <TextField promptText="Email" styleClass="textBox" />
+            <TextField promptText="Designation" styleClass="textBox" />
+            <TextField styleClass="textBox" />
+                <Region prefHeight="82.0" prefWidth="274.0" />
+                <Button defaultButton="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" styleClass="loginButton" text="Button" textAlignment="CENTER" />
+            </children>
+        </VBox>
+    </children>
+
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+</AnchorPane>

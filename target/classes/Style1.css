@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'ubuntu';
+    src: url('Ubuntu-R.ttf');
+}
+
+.header{
+    -fx-background-color:#eebdbd  ;
+}
+.sideBar{
+    -fx-background-color:#923a47 ;
+}
+.loginPanel{
+    -fx-background-color: #f9e8eb  ;
+    -fx-background-insets: 20px;
+
+}
+
+.textBox{
+    -fx-padding: 15px;
+    -fx-border-insets: 15px;
+    -fx-background-insets: 10px;
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 17px;
+}
+.loginButton{
+    -fx-padding: 15px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 17px;
+    -fx-background-color: #923a47;
+    -fx-text-fill: white;
+}
+.labelHeading{
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
+}
+.labelHeadingBack{
+    -fx-background-color: #923a47 ;
+}
+.loginButton:hover{
+    -fx-padding: 15px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 17px;
+    -fx-background-color: #b84b4b;
+    -fx-text-fill: white;
+}
+.sideButton{
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 17px;
+    -fx-background-color: #923a47;
+    -fx-text-fill: white;
+    -fx-pref-height: 50px;
+}
+
+.sideButton:hover{
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 17px;
+    -fx-background-color: #b84b4b;
+    -fx-text-fill: white;
+    -fx-pref-height: 50px;
+}
+.newPatientTextBox{
+    -fx-font-family: 'ubuntu';
+    -fx-font-size: 10px;
+}

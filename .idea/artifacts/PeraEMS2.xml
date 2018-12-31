@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="PeraEMS2">
+    <output-path>$PROJECT_DIR$/out/artifacts/PeraEMS2</output-path>
+    <root id="root">
+      <element id="archive" name="PeraEMS2.jar">
+        <element id="module-output" name="PeraEMS2" />
+      </element>
+    </root>
+  </artifact>
+</component>
