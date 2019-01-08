@@ -22,13 +22,13 @@
    <children>
       <Pane fx:id="sideBar" prefHeight="600.0" prefWidth="237.0" styleClass="sideBar">
          <children>
-            <VBox layoutY="192.0" prefHeight="410.0" prefWidth="237.0">
+            <VBox fx:id="sideButtons" layoutY="192.0" prefHeight="410.0" prefWidth="237.0" visible="false">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Patient" />
+                  <Button fx:id="newPatientButton" mnemonicParsing="false" onAction="#openNewPatientPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Patient" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="new Threatment" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medical" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medicine" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Student" />
+                  <Button fx:id="registerStudentButton" mnemonicParsing="false" onAction="#openRegStudentPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Student" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Medicine" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New User" />
                </children>
@@ -47,7 +47,7 @@
          <center>
             <Pane fx:id="navPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="122.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel">
+                  <AnchorPane fx:id="loginPanel" layoutX="122.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel">
                      <children>
                         <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="328.0" styleClass="labelHeadingBack">
                            <children>
@@ -56,12 +56,12 @@
                         </Pane>
                         <VBox layoutX="48.0" layoutY="207.0" prefHeight="317.0" prefWidth="274.0" styleClass="textBox">
                            <children>
-                              <TextField promptText="User Name" styleClass="textBox">
+                              <TextField fx:id="userNameLogin" promptText="User Name" styleClass="textBox">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </TextField>
-                              <TextField promptText="Password" styleClass="textBox" />
+                              <PasswordField fx:id="passwordLogin" promptText="Password" styleClass="textBox" />
                               <Region prefHeight="126.0" prefWidth="274.0" />
                               <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#loadSignUp" prefHeight="50.0" prefWidth="275.0" styleClass="loginButton" text="Button" textAlignment="CENTER" />
                            </children>

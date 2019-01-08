@@ -67,3 +67,9 @@
     -fx-font-family: 'ubuntu';
     -fx-font-size: 10px;
 }
+.scrollPaneStyle{
+
+    -fx-background: #f9e8eb;
+    -fx-border-color: #f9e8eb;
+
+}
