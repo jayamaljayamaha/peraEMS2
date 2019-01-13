@@ -4,13 +4,13 @@
 }
 
 .header{
-    -fx-background-color:#eebdbd  ;
+    -fx-background-color: #c1e3ee;
 }
 .sideBar{
-    -fx-background-color:#923a47 ;
+    -fx-background-color:  #0b3949;
 }
 .loginPanel{
-    -fx-background-color: #f9e8eb  ;
+    -fx-background-color: #bed3ce;
     -fx-background-insets: 20px;
 
 }
@@ -21,6 +21,8 @@
     -fx-background-insets: 10px;
     -fx-font-family: 'ubuntu';
     -fx-font-size: 17px;
+    -webkit-fx-text-transform: 'uppercase';
+
 }
 .loginButton{
     -fx-padding: 15px;
@@ -28,7 +30,7 @@
     -fx-background-insets: 10px;
     -fx-font-family: 'ubuntu';
     -fx-font-size: 17px;
-    -fx-background-color: #923a47;
+    -fx-background-color: #26665b;
     -fx-text-fill: white;
 }
 .labelHeading{
@@ -37,7 +39,7 @@
     -fx-text-fill: white;
 }
 .labelHeadingBack{
-    -fx-background-color: #923a47 ;
+    -fx-background-color:  #26665b;
 }
 .loginButton:hover{
     -fx-padding: 15px;
@@ -45,13 +47,14 @@
     -fx-background-insets: 10px;
     -fx-font-family: 'ubuntu';
     -fx-font-size: 17px;
-    -fx-background-color: #b84b4b;
+    -fx-background-color: #3d9a94;
     -fx-text-fill: white;
 }
 .sideButton{
     -fx-font-family: 'ubuntu';
     -fx-font-size: 17px;
-    -fx-background-color: #923a47;
+    -fx-text-alignment: right;
+    -fx-background-color:  #26665b;
     -fx-text-fill: white;
     -fx-pref-height: 50px;
 }
@@ -59,7 +62,7 @@
 .sideButton:hover{
     -fx-font-family: 'ubuntu';
     -fx-font-size: 17px;
-    -fx-background-color: #b84b4b;
+    -fx-background-color:  #3d9a94;
     -fx-text-fill: white;
     -fx-pref-height: 50px;
 }
@@ -69,7 +72,20 @@
 }
 .scrollPaneStyle{
 
-    -fx-background: #f9e8eb;
-    -fx-border-color: #f9e8eb;
+    -fx-background: #bed3ce;
+    -fx-border-color: #bed3ce;
 
+}
+.homePage{
+    -fx-background-color:  #ffffff;
+    -fx-background-insets: 20px;
+}
+.defaultBack{
+    -fx-background-color:  #ffffff;
+}
+.sideLogo{
+    -fx-text-fill: white;
+    -fx-padding: 15px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
 }

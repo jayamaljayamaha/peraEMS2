@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -19,60 +20,119 @@
 <?import javafx.scene.layout.VBox?>
 
 <HBox fx:id="mainPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@Style1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <Pane fx:id="sideBar" prefHeight="600.0" prefWidth="237.0" styleClass="sideBar">
-         <children>
-            <VBox fx:id="sideButtons" layoutY="192.0" prefHeight="410.0" prefWidth="237.0" visible="false">
-               <children>
-                  <Button fx:id="newPatientButton" mnemonicParsing="false" onAction="#openNewPatientPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Patient" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="new Threatment" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medical" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medicine" />
-                  <Button fx:id="registerStudentButton" mnemonicParsing="false" onAction="#openRegStudentPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Student" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Medicine" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New User" />
-               </children>
-            </VBox>
-         </children></Pane>
-      <BorderPane prefHeight="400.0" prefWidth="595.0" HBox.hgrow="ALWAYS">
-         <top>
-            <Pane prefHeight="51.0" prefWidth="758.0" styleClass="header" BorderPane.alignment="CENTER" />
-         </top>
-         <left>
-            <Pane prefHeight="549.0" prefWidth="89.0" BorderPane.alignment="CENTER" />
-         </left>
-         <right>
-            <Pane prefHeight="549.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
-         </right>
-         <center>
-            <Pane fx:id="navPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <AnchorPane fx:id="loginPanel" layoutX="122.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel">
-                     <children>
-                        <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="328.0" styleClass="labelHeadingBack">
-                           <children>
-                              <Label contentDisplay="CENTER" layoutX="119.0" layoutY="32.0" styleClass="labelHeading" text="LOGIN" />
-                           </children>
-                        </Pane>
-                        <VBox layoutX="48.0" layoutY="207.0" prefHeight="317.0" prefWidth="274.0" styleClass="textBox">
-                           <children>
-                              <TextField fx:id="userNameLogin" promptText="User Name" styleClass="textBox">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </TextField>
-                              <PasswordField fx:id="passwordLogin" promptText="Password" styleClass="textBox" />
-                              <Region prefHeight="126.0" prefWidth="274.0" />
-                              <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#loadSignUp" prefHeight="50.0" prefWidth="275.0" styleClass="loginButton" text="Button" textAlignment="CENTER" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-               </children></Pane>
-         </center></BorderPane>
-   </children>
+<children>
+   <Pane fx:id="sideBar" prefHeight="600.0" prefWidth="237.0" styleClass="sideBar">
+      <children>
+         <VBox fx:id="sideButtons" layoutY="142.0" prefHeight="352.0" prefWidth="237.0">
+            <children>
+               <Button fx:id="newPatientButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openNewPatientPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Patient">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: 100px;" styleClass="sideLogo">
+                           <image>
+                              <Image url="@icons8-wheelchair-96.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Threatment">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-health-checkup-60.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medical">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@issueMedical.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="Issue medicine">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@issueMedicine.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button fx:id="registerStudentButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#openRegStudentPanel" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Student">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@newStudent.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New Medicine">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@newThreatment.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="239.0" styleClass="sideButton" text="New User">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@newUser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+            </children>
+         </VBox>
+            <ImageView fitHeight="115.0" fitWidth="237.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="231.0" layoutX="3.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo3.png" />
+               </image>
+            </ImageView>
+      </children></Pane>
+   <BorderPane prefHeight="400.0" prefWidth="595.0" HBox.hgrow="ALWAYS">
+      <top>
+         <Pane prefHeight="51.0" prefWidth="758.0" styleClass="header" BorderPane.alignment="CENTER" />
+      </top>
+      <left>
+         <Pane prefHeight="549.0" prefWidth="89.0" styleClass="defaultBack" BorderPane.alignment="CENTER" />
+      </left>
+      <right>
+         <Pane prefHeight="549.0" prefWidth="60.0" styleClass="defaultBack" BorderPane.alignment="CENTER" />
+      </right>
+      <center>
+         <Pane fx:id="navPane" prefHeight="200.0" prefWidth="200.0" styleClass="defaultBack" BorderPane.alignment="CENTER">
+            <children>
+               <AnchorPane fx:id="loginPanel" layoutX="122.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="369.0" styleClass="loginPanel">
+                  <children>
+                     <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="328.0" styleClass="labelHeadingBack">
+                        <children>
+                           <Label contentDisplay="CENTER" layoutX="119.0" layoutY="32.0" styleClass="labelHeading" text="LOGIN" />
+                        </children>
+                     </Pane>
+                     <VBox layoutX="48.0" layoutY="207.0" prefHeight="317.0" prefWidth="274.0" styleClass="textBox">
+                        <children>
+                           <TextField fx:id="userNameLogin" promptText="User Name" styleClass="textBox">
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                           </TextField>
+                           <PasswordField fx:id="passwordLogin" promptText="Password" styleClass="textBox" />
+                           <Region prefHeight="126.0" prefWidth="274.0" />
+                           <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#loadSignUp" prefHeight="50.0" prefWidth="275.0" styleClass="loginButton" text="Button" textAlignment="CENTER" />
+                        </children>
+                     </VBox>
+                  </children>
+               </AnchorPane>
+            </children></Pane>
+      </center></BorderPane>
+</children>
 
-    <stylesheets>
-        <URL value="@Style1.css" />
-    </stylesheets>
+<stylesheets>
+   <URL value="@Style1.css" />
+</stylesheets>
 </HBox>

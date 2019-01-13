@@ -13,5 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jfoenix-8.0.8" level="project" />
     <orderEntry type="library" name="mysql-connector-java" level="project" />
+    <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.8" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle:ojdbc7:12.1.0" level="project" />
   </component>
 </module>

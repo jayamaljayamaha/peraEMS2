@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="homePage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.73" prefHeight="549" prefWidth="600.0" styleClass="homePage" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="138.0" fitWidth="530.0" layoutX="35.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@peraEmsLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
