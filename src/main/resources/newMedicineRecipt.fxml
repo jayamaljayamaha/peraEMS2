@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="newPatientPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549" prefWidth="600.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.medicneRecieptController">
+    <children>
+        <Button fx:id="medicineReciptOkButton" layoutX="438.0" layoutY="459.0" mnemonicParsing="false" onAction="#medicineReciptOK" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="OK" />
+        <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="559.0" styleClass="labelHeadingBack">
+            <children>
+                <Label contentDisplay="CENTER" layoutX="163.0" layoutY="32.0" styleClass="labelHeading" text="Medicine Reciept" />
+            </children>
+        </Pane>
+      <TableView fx:id="medicineListTable" editable="true" layoutX="21.0" layoutY="250.0" prefHeight="185.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="261.0" text="Medicine Name" />
+          <TableColumn fx:id="dosageColumn" minWidth="0.0" prefWidth="164.0" text="Dosage" />
+            <TableColumn fx:id="daysColumn" minWidth="0.0" prefWidth="133.0" text="How many Days" />
+        </columns>
+      </TableView>
+      <HBox layoutX="32.0" layoutY="153.0" prefHeight="29.0" prefWidth="537.0">
+         <children>
+            <TextField fx:id="medicineName" prefHeight="32.0" prefWidth="241.0" promptText="Name" />
+            <Region prefHeight="29.0" prefWidth="28.0" />
+            <TextField fx:id="medicineDosage" prefHeight="33.0" prefWidth="136.0" promptText="Dosage" />
+            <Region prefHeight="29.0" prefWidth="25.0" />
+            <TextField fx:id="numOfDays" prefHeight="34.0" prefWidth="105.0" promptText="days" />
+         </children>
+      </HBox>
+      <Button fx:id="addMedicineButton" layoutX="329.0" layoutY="189.0" mnemonicParsing="false" onAction="#addMedicineButton" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="Add" />
+      <Button fx:id="deleteMedicineButton" layoutX="448.0" layoutY="189.0" mnemonicParsing="false" onAction="#deleteMedicine" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="Delete" />
+    </children>
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+</AnchorPane>

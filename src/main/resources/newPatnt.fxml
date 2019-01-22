@@ -4,21 +4,11 @@
 <?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import java.net.URL?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.VBox?>
+
 
 <AnchorPane fx:id="newPatientPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549" prefWidth="600.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button fx:id="searchButton1" layoutX="438.0" layoutY="459.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="Submit" />
+      <Button fx:id="newPatientSubmitButton" layoutX="438.0" layoutY="459.0" mnemonicParsing="false" onAction="#createNewThreatment" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="Submit" />
       <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="559.0" styleClass="labelHeadingBack">
          <children>
             <Label contentDisplay="CENTER" layoutX="195.0" layoutY="32.0" styleClass="labelHeading" text="New Patient" />
@@ -31,15 +21,15 @@
             <Button fx:id="newPatientSearchButton" mnemonicParsing="false" onAction="#searchPatient" prefHeight="50.0" prefWidth="156.0" styleClass="loginButton" text="Search" />
          </children>
       </HBox>
-      <ScrollPane layoutX="21.0" layoutY="216.0" prefHeight="211.0" prefWidth="559.0" styleClass="scrollPaneStyle">
+      <ScrollPane layoutX="21.0" layoutY="216.0" prefHeight="227.0" prefWidth="559.0" styleClass="scrollPaneStyle">
          <content>
             <VBox prefHeight="374.0" prefWidth="320.0">
                <children>
                   <TextField fx:id="newPatientPatientName" prefHeight="25.0" prefWidth="348.0" promptText="Patient Name" styleClass="textBox" />
                   <TextField fx:id="newPatientPatientFac" prefHeight="25.0" prefWidth="348.0" promptText="Faculty" styleClass="textBox" />
-                  <TextField prefHeight="25.0" prefWidth="348.0" promptText="Resident Hall" styleClass="textBox" />
-                  <TextField prefHeight="25.0" prefWidth="348.0" promptText="Patient Age" styleClass="textBox" />
-                  <TextArea prefHeight="164.0" prefWidth="324.0" promptText="Reason " styleClass="textBox" />
+                  <TextField fx:id="newPatientPatientHall" prefHeight="25.0" prefWidth="348.0" promptText="Resident Hall" styleClass="textBox" />
+                  <TextField fx:id="newPatientPatientAge" prefHeight="25.0" prefWidth="348.0" promptText="Patient Age" styleClass="textBox" />
+                  <TextArea fx:id="newPatientPatientReason" prefHeight="164.0" prefWidth="324.0" promptText="Reason " styleClass="textBox" />
                </children>
             </VBox>
          </content>

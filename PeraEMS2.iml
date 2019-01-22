@@ -12,8 +12,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jfoenix-8.0.8" level="project" />
-    <orderEntry type="library" name="mysql-connector-java" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.471" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.14" level="project" />
+    <orderEntry type="library" name="testfx-core-4.0.15-alpha" level="project" />
+    <orderEntry type="library" name="testfx-junit5-4.0.15-alpha" level="project" />
     <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.8" level="project" />
     <orderEntry type="library" name="Maven: com.oracle:ojdbc7:12.1.0" level="project" />
+    <orderEntry type="library" name="testfx-junit-4.0.14-alpha" level="project" />
+    <orderEntry type="library" name="junit4" level="project" />
   </component>
 </module>

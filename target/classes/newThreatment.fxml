@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="newThreatmentPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549" prefWidth="600.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.newThreatmentController">
+    <children>
+        <ScrollPane layoutX="21.0" layoutY="223.0" prefHeight="233.0" prefWidth="559.0" styleClass="scrollPaneStyle">
+            <content>
+                <VBox prefHeight="525.0" prefWidth="320.0">
+                    <children>
+                        <TextField fx:id="newThretmentPatientName" prefHeight="25.0" prefWidth="348.0" promptText="Patient Name" styleClass="textBox" />
+                        <TextField fx:id="newTreatementPatientFac" prefHeight="25.0" prefWidth="348.0" promptText="Faculty" styleClass="textBox" />
+                        <TextField fx:id="newThretmentPatientHall" prefHeight="25.0" prefWidth="348.0" promptText="Resident Hall" styleClass="textBox" />
+                        <TextField fx:id="newThretmentPatientAge" prefHeight="25.0" prefWidth="348.0" promptText="Patient Age" styleClass="textBox" />
+                        <TextArea fx:id="newThretmentReason" prefHeight="160.0" prefWidth="320.0" promptText="Reason " styleClass="textBox" />
+                  <TextArea fx:id="newThretmentDescription" prefHeight="160.0" prefWidth="320.0" promptText="Description about treatment" styleClass="textBox" />
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <Button fx:id="newPatientSubmitButton" layoutX="438.0" layoutY="459.0" mnemonicParsing="false" onAction="#newThretmentSubmit" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="Submit" />
+        <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="559.0" styleClass="labelHeadingBack">
+            <children>
+                <Label contentDisplay="CENTER" layoutX="163.0" layoutY="32.0" styleClass="labelHeading" text="New Threatment" />
+            </children>
+        </Pane>
+        <HBox layoutX="23.0" layoutY="150.0" prefHeight="27.0" prefWidth="545.0">
+            <children>
+                <TextField fx:id="newThreatementThreatmentID" onKeyReleased="#toUpperCase" prefHeight="25.0" prefWidth="348.0" promptText="Threatment ID" styleClass="textBox" />
+                <Region prefHeight="27.0" prefWidth="121.0" />
+                <Button fx:id="newPatientSearchButton" mnemonicParsing="false" onAction="#searchThretment" prefHeight="50.0" prefWidth="156.0" styleClass="loginButton" text="Search" />
+            </children>
+        </HBox>
+      <Button fx:id="medicineReciptButton" layoutX="278.0" layoutY="459.0" mnemonicParsing="false" onAction="#medicineReciptAction" prefHeight="50.0" prefWidth="169.0" styleClass="loginButton" text="Medicine Recipt" />
+      <Button fx:id="issueMedicalButton" layoutX="129.0" layoutY="459.0" mnemonicParsing="false" onAction="#issueMedicalAction" prefHeight="50.0" prefWidth="157.0" styleClass="loginButton" text="Issue Medical" />
+    </children>
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+</AnchorPane>

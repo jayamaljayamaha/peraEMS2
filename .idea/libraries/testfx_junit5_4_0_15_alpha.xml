@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="testfx-junit5-4.0.15-alpha">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/testfx-junit5-4.0.15-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

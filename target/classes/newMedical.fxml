@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="newMedicalPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549" prefWidth="600.0" styleClass="loginPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.newMedicalControler">
+    <children>
+        <Button fx:id="medicalOkButton" layoutX="435.0" layoutY="475.0" mnemonicParsing="false" onAction="#medicalOkAction" prefHeight="50.0" prefWidth="130.0" styleClass="loginButton" text="OK" />
+        <Pane layoutX="21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="559.0" styleClass="labelHeadingBack">
+            <children>
+                <Label contentDisplay="CENTER" layoutX="226.0" layoutY="32.0" styleClass="labelHeading" text="Medical" />
+            </children>
+        </Pane>
+      <TextField fx:id="PatientName" layoutX="38.0" layoutY="143.0" prefHeight="32.0" prefWidth="241.0" promptText="Name" />
+      <TextField fx:id="patientId" layoutX="38.0" layoutY="188.0" prefHeight="32.0" prefWidth="241.0" promptText="Student ID" />
+      <TextField fx:id="patientAge" layoutX="38.0" layoutY="234.0" prefHeight="32.0" prefWidth="241.0" promptText="Age" />
+      <TextField fx:id="patientHall" layoutX="38.0" layoutY="275.0" prefHeight="32.0" prefWidth="241.0" promptText="Residence Hall" />
+      <TextField fx:id="howManyDays" layoutX="38.0" layoutY="324.0" prefHeight="32.0" prefWidth="241.0" promptText="How Many Days" />
+      <TextField fx:id="DoctorsName" layoutX="38.0" layoutY="484.0" prefHeight="32.0" prefWidth="241.0" promptText="Recomended By" />
+      <TextArea fx:id="reason" layoutX="38.0" layoutY="364.0" prefHeight="111.0" prefWidth="381.0" promptText="Reason" />
+    </children>
+
+    <stylesheets>
+        <URL value="@Style1.css" />
+    </stylesheets>
+</AnchorPane>

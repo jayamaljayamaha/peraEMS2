@@ -5,14 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,15 +21,18 @@ public class Controller implements Initializable {
     @FXML
     Pane navPane;
     @FXML
-    Button newPatientButton, registerStudentButton, newPatientSearchButton;
+    Button newPatientButton, registerStudentButton, newPatientSearchButton, newThreatmentButton;
     @FXML
-    TextField userNameLogin, newPatientPatientID,newPatientPatientName,newPatientPatientFac;
+    TextField userNameLogin, newPatientPatientID,newPatientPatientName,newPatientPatientFac,newPatientPatientHall,
+            newPatientPatientAge;
+    @FXML
+    TextArea newPatientPatientReason;
     @FXML
     PasswordField passwordLogin;
     @FXML
     VBox sideButtons;
     @FXML
-    AnchorPane loginPanel, homePage, registerPatientPane, signUpPanel, newPatientPanel;
+    AnchorPane loginPanel, homePage, registerPatientPane, signUpPanel, newPatientPanel, newThretmentPanel, newMedicalPanel;
 
     Connection connection = null;
     PreparedStatement prepStatment = null;
@@ -128,7 +126,7 @@ public class Controller implements Initializable {
 
     @FXML
     public void searchPatient(ActionEvent event){
-
+        System.out.println(navPane);
         String patientID = newPatientPatientID.getText();
 
         dataModel model = new dataModel();
@@ -144,15 +142,6 @@ public class Controller implements Initializable {
                 newPatientPatientName.setText(results.getString("studentName"));
                 newPatientPatientFac.setText(results.getString("faculty"));
 
-                //Date date = new Date();
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(new Date());
-                System.out.println(cal.get(Calendar.DAY_OF_MONTH));
-                System.out.println(cal.get(Calendar.MINUTE));
-                System.out.println(cal.get(Calendar.SECOND));
-
-                //String date = localDate.getDayOfMonth();;
-
             }
 
 
@@ -164,8 +153,105 @@ public class Controller implements Initializable {
     @FXML
     public void toUpperCase(KeyEvent evt){
 
-        
         newPatientPatientID.setText(newPatientPatientID.getText().toUpperCase());
         newPatientPatientID.positionCaret(newPatientPatientID.getText().length());
     }
+
+    @FXML
+    public void createNewThreatment(ActionEvent event){
+
+        String indexNo = newPatientPatientID.getText();
+        String name = newPatientPatientName.getText();
+        String fac = newPatientPatientFac.getText();
+        String hall = newPatientPatientHall.getText();
+        String age = newPatientPatientAge.getText();
+        String reason = newPatientPatientReason.getText();
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+
+        String threatmentID = indexNo+cal.get(Calendar.DAY_OF_MONTH)+cal.get(Calendar.HOUR)+cal.get(Calendar.MINUTE);
+        System.out.println(threatmentID);
+
+        String[] keys ={"threatmentId", "indexNo","patientName","faculty","residenceHall","age","reason"};
+        String[] values = {threatmentID,indexNo,name,fac,hall,age,reason};
+        //Object[] values2={threatmentID,indexNo,name,fac,hall,Integer.parseInt(age),reason};
+
+
+        System.out.println(navPane);
+       // newPatientPanel.setVisible(false);
+        //showHomePage();
+
+        dataModel model = new dataModel();
+        model.connectDataBase();
+        model.insertData("currentthreatments",keys,values);
+
+        model.closeConnection();
+        TextField textArea = new TextField(threatmentID);
+        textArea.setEditable(false);
+        textArea.setMinWidth(300);
+        //textArea.setWrapText(true);
+        GridPane gridPane = new GridPane();
+        gridPane.setMaxWidth(Double.MAX_VALUE);
+        gridPane.add(textArea, 0, 0);
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Threatment ID");
+        alert.setHeaderText("Threatment ID is ");
+        alert.getDialogPane().setContent(gridPane);
+        alert.showAndWait();
+
+
+
+
+
+    }
+
+    public void newThreatment(ActionEvent event){
+
+
+        try {
+            newThretmentPanel = FXMLLoader.load(getClass().getResource("/newThreatment.fxml"));
+            navPane.getChildren().clear();
+            navPane.getChildren().add(newThretmentPanel);
+            double widthNavPane = navPane.getWidth();
+            double widthSignUpPanel = newThretmentPanel.getPrefWidth();
+            double posX =(widthNavPane-widthSignUpPanel)/2;
+            newThretmentPanel.setLayoutX(posX);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showHomePage(){
+
+        try {
+            homePage = FXMLLoader.load(getClass().getResource("/homePage.fxml"));
+            navPane.getChildren().clear();
+            navPane.getChildren().add(homePage);
+            double widthNavPane = navPane.getWidth();
+            double widthSignUpPanel = homePage.getPrefWidth();
+            double posX =(widthNavPane-widthSignUpPanel)/2;
+            homePage.setLayoutX(posX);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void issueMedicalAction(){
+        try {
+            newMedicalPanel = FXMLLoader.load(getClass().getResource("/newMedical.fxml"));
+            navPane.getChildren().clear();
+            navPane.getChildren().add(newMedicalPanel);
+            double widthNavPane = navPane.getWidth();
+            double widthSignUpPanel = newMedicalPanel.getPrefWidth();
+            double posX =(widthNavPane-widthSignUpPanel)/2;
+            newMedicalPanel.setLayoutX(posX);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }
